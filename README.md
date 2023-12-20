@@ -1,2 +1,3 @@
 # 100-days-of-code
-This is my repository where I would be practising coding for 100 days both for DSA and Development.
+This is my repository where I would be practising coding for 100 days both for DSA and Development on alternative days!. 
+
