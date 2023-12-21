@@ -6,55 +6,76 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
         <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet"/>
         <style>
             ::-webkit-scrollbar {
                 display: none;
+            }
+
+            #hamburger_icon:checked ~ #hamburger_sidebar {
+                left: 0px;
+                transition-duration: 500ms;
             }
         </style>
     </head>
 
     <body class="bg-zinc-900 m-0 p-0 w-full h-screen flex justify-center">
-        <div id="container" class="w-[1300px] h-screen bg-zinc-900 flex-col">
-            <nav class="bg-zinc-900 w-full h-[100px] flex justify-between p-4">
-                <div>
-                    <span class="text-white text-4xl font-bold tracking-wider leading-loose" style="font-family: 'Caveat', cursive;">ParthaSarathiDey.tech</span>
-                </div>
-                <div class=" p-6">
-                    <ul class="flex justify-between space-x-20 text-white text-xl font-mono">
-                        <li class="hover:underline underline-offset-8 duration-700 hover:duration-700">
-                            <a href="#home">Home</a>
-                        </li>
-                        <li class="hover:underline underline-offset-8 duration-700 hover:duration-700">
-                            <a href="#projects">Projects</a>
-                        </li>
-                        <li class="hover:underline underline-offset-8 duration-700 hover:duration-700">
-                            <a href="#experience">Experience</a>
-                        </li>
-                        <li class="hover:underline underline-offset-8 duration-700 hover:duration-700">
-                            <a href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+        
+        <label for="hamburger" id="hamburger_icon" class="ri-menu-unfold-line text-white text-4xl fixed top-4 left-4 font-bold md:hidden hover:bg-white hover:text-black rounded px-1 py-0.5">
+            <input type="checkbox" name="hamburger" id="hamburger" class="hidden">
+        </label>
 
-            <div id="home" class="w-full h-[1700px] flex-col pt-[180px]">
-                <div class="w-full h-[300px] flex justify-center items-center mb-[30px]">
-                    <div class="w-[280px] h-[280px] bg-gradient-to-r from-orange-400 to-red-500 rounded-full p-2">
+        <a href="https://github.com/parthasdey2304/" class="ri-github-fill fixed bg-white px-0.5 text-4xl md:text-6xl rounded-full mt-4 md:bottom-4 right-4 hover:animate-pulse hover:shadow-md hover:shadow-white"></a>
+
+        <div id="hamburger_sidebar" class="w-[300px] bg-white h-screen duration-500 rounded-tr-xl rounded-br-xl absolute left-[-300px] flex-col">
+
+        </div>
+
+        <div id="container" class="w-full md:w-[1300px] h-screen bg-zinc-900 flex-col">
+            <div class="hidden md:contents">
+                <nav class="bg-zinc-900 w-full h-[100px] flex justify-between p-4">
+                    <div>
+                        <span class="text-white text-4xl font-bold tracking-wider leading-loose" style="font-family: 'Caveat', cursive;">ParthaSarathiDey.tech</span>
+                    </div>
+                    <div class=" p-6">
+                        <ul class="flex justify-between space-x-20 text-white text-xl font-mono">
+                            <li class="hover:underline underline-offset-8 duration-700 hover:duration-700">
+                                <a href="#home">Home</a>
+                            </li>
+                            <li class="hover:underline underline-offset-8 duration-700 hover:duration-700">
+                                <a href="#projects">Projects</a>
+                            </li>
+                            <li class="hover:underline underline-offset-8 duration-700 hover:duration-700">
+                                <a href="#experience">Experience</a>
+                            </li>
+                            <li class="hover:underline underline-offset-8 duration-700 hover:duration-700">
+                                <a href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <div id="home" class="w-full h-[1850px] flex-col pt-[180px]">
+                <div class="w-full h-[300px] flex justify-center items-center md:mb-[30px]">
+                    <div class="w-[240px] md:w-[280px] h-[240px] md:h-[280px] bg-gradient-to-r from-orange-400 to-red-500 rounded-full p-2">
                         <img src="https://avatars.githubusercontent.com/u/131694386?v=4" alt="Partha's Image" class="rounded-full">
                     </div>
                 </div>
 
-                <div class="w-full h-[200px] flex justify-center">
-                    <span class="text-white text-6xl text-center font-extrabold">I do code and <br> make content <span class="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-red-600">about it!</span></span>
+                <div class="w-full h-[200px] flex justify-center px-6">
+                    <span class="text-white text-5xl md:text-6xl text-center font-extrabold">I do code and <br> make content <span class="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-red-600">about it!</span></span>
                 </div>
 
-                <div class="text-zinc-400 flex justify-center text-[20px] mb-[100px]">
+                <div class="text-zinc-400 flex justify-center text-[20px] mb-[100px] px-4">
                     <span class="w-[700px] text-center font-normal">I am a Full Stack Developer who is specialising in <br> MERN Stack with 2 years of experience. Along with that I am learning <br>Backend Development with Java and AWS.</span>
                 </div>
 
-                <div class="w-full flex justify-center space-x-5 mb-[150px]">
-                    <a class="bg-white px-12 py-5 text-3xl font-semibold rounded-full">Get In Touch</a>
-                    <a class="bg-zinc-900 hover:bg-white text-white hover:text-black duration-500 hover:duration-500 border-2 px-10 py-5 text-3xl font-semibold rounded-full">Download CV</a>
+                <div class="w-full flex justify-center mb-[150px]">
+                    <div class="w-full flex justify-center space-x-4 md:space-x-5 px-2">
+                        <a class="bg-white duration-500 px-6 md:px-12 py-5 text-xl md:text-3xl font-semibold rounded-full">Get In Touch</a>
+                        <a class="bg-zinc-900 hover:bg-white text-white hover:text-black duration-500 hover:duration-500 border-2 px-6 md:px-10 py-5 text-xl md:text-3xl font-semibold rounded-full">Download CV</a>
+                    </div>
                 </div>
 
                 <div class="w-full flex-col space-y-10">
@@ -62,40 +83,46 @@
                         <span class="uppercase text-white tracking-widest text-2xl font-bold">experience with</span>
                     </div>
 
-                    <div class="w-full flex justify-center">
-                        <div class="w-[400px] grid grid-cols-5 gap-8">
-                            <img src="https://skillicons.dev/icons?i=html"></img>
-                            <img src="https://skillicons.dev/icons?i=css"></img>
-                            <img src="https://skillicons.dev/icons?i=javascript"></img>
-                            <img src="https://skillicons.dev/icons?i=typescript"></img>
-                            <img src="https://skillicons.dev/icons?i=java"></img>
-                            <img src="https://skillicons.dev/icons?i=python"></img>
-                            <img src="https://skillicons.dev/icons?i=dart"></img>
-                            <img src="https://skillicons.dev/icons?i=c"></img>
-                            <img src="https://skillicons.dev/icons?i=cpp"></img>
-                            <img src="https://skillicons.dev/icons?i=rust"></img>
-                            <img src="https://skillicons.dev/icons?i=tailwindcss"></img>
-                            <img src="https://skillicons.dev/icons?i=mongodb"></img>
-                            <img src="https://skillicons.dev/icons?i=mysql"></img>
-                            <img src="https://skillicons.dev/icons?i=firebase"></img>
-                            <img src="https://skillicons.dev/icons?i=graphql"></img>
-                            <img src="https://skillicons.dev/icons?i=react"></img>
-                            <img src="https://skillicons.dev/icons?i=redux"></img>
-                            <img src="https://skillicons.dev/icons?i=nodejs"></img>
-                            <img src="https://skillicons.dev/icons?i=expressjs"></img>
-                            <img src="https://skillicons.dev/icons?i=nextjs"></img>
-                            <img src="https://skillicons.dev/icons?i=git"></img>
-                            <img src="https://skillicons.dev/icons?i=github"></img>
-                            <img src="https://skillicons.dev/icons?i=docker"></img>
-                            <img src="https://skillicons.dev/icons?i=kubernetes"></img>
-                            <img src="https://skillicons.dev/icons?i=linux"></img>
+                    <div class="w-full flex justify-center p-8">
+                        <div class="w-[400px] grid grid-cols-5 gap-4 md:gap-8">
+                            <img class="w-20 h-20" src="https://skillicons.dev/icons?i=html"></img>
+                            <img class="w-20 h-20" src="https://skillicons.dev/icons?i=css"></img>
+                            <img class="w-20 h-20" src="https://skillicons.dev/icons?i=javascript"></img>
+                            <img class="w-20 h-20" src="https://skillicons.dev/icons?i=typescript"></img>
+                            <img class="w-20 h-20" src="https://skillicons.dev/icons?i=java"></img>
+                            <img class="w-20 h-20" src="https://skillicons.dev/icons?i=python"></img>
+                            <img class="w-20 h-20" src="https://skillicons.dev/icons?i=dart"></img>
+                            <img class="w-20 h-20" src="https://skillicons.dev/icons?i=c"></img>
+                            <img class="w-20 h-20" src="https://skillicons.dev/icons?i=cpp"></img>
+                            <img class="w-20 h-20" src="https://skillicons.dev/icons?i=rust"></img>
+                            <img class="w-20 h-20" src="https://skillicons.dev/icons?i=tailwindcss"></img>
+                            <img class="w-20 h-20" src="https://skillicons.dev/icons?i=mongodb"></img>
+                            <img class="w-20 h-20" src="https://skillicons.dev/icons?i=mysql"></img>
+                            <img class="w-20 h-20" src="https://skillicons.dev/icons?i=firebase"></img>
+                            <img class="w-20 h-20" src="https://skillicons.dev/icons?i=graphql"></img>
+                            <img class="w-20 h-20" src="https://skillicons.dev/icons?i=react"></img>
+                            <img class="w-20 h-20" src="https://skillicons.dev/icons?i=redux"></img>
+                            <img class="w-20 h-20" src="https://skillicons.dev/icons?i=nodejs"></img>
+                            <img class="w-20 h-20" src="https://skillicons.dev/icons?i=expressjs"></img>
+                            <img class="w-20 h-20" src="https://skillicons.dev/icons?i=nextjs"></img>
+                            <img class="w-20 h-20" src="https://skillicons.dev/icons?i=git"></img>
+                            <img class="w-20 h-20" src="https://skillicons.dev/icons?i=github"></img>
+                            <img class="w-20 h-20" src="https://skillicons.dev/icons?i=docker"></img>
+                            <img class="w-20 h-20" src="https://skillicons.dev/icons?i=kubernetes"></img>
+                            <img class="w-20 h-20" src="https://skillicons.dev/icons?i=linux"></img>
                         </div>
                     </div>
 
                 </div>
             </div>
 
-          
+<!--             <div id="projects" class="">
+                <div class="w-full h-[100px] flex justify-center">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-red-600 text-5xl uppercase font-extrabold">projects</span>
+                </div>
+
+                <div class="w-full flex-col"></div>
+            </div> -->
         </div>
     </body>
 </html>
