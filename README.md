@@ -11,7 +11,9 @@ It was my first day and I really was not sure as I had not made a proper roadmap
 + [Special Number](https://github.com/parthasdey2304/100-days-of-code/blob/main/day_1/special_number.java)
 
 ## Day 2 (Development)
-I am planning on improving my PortFolio Page [ParthaSarathiDey.tech](https://parthasarathidey.tech)
+Yeah!! It's the second day and it goes as planned [ParthaSarathiDey.tech](https://parthasarathidey.tech). I have modified my PortFolio website. It is still under construction and the sections of `Projects`, `Experience`, and `Contact me`.
+
+<img width="506" alt="image" src="https://github.com/parthasdey2304/100-days-of-code/assets/131694386/dfe30766-b860-44f0-bf77-7c56b0ead13d">
 
 ## Day 3 (DSA)
 I am planning on revising the basic DSA concepts of Recursion, Stack, Queue, LinkedList and Traversing through them.
