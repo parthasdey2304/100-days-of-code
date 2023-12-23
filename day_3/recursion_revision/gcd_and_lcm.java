@@ -12,6 +12,7 @@ public class gcd_and_lcm {
     int a = 17;
     int b = 5;
     int gcd = gcd_of_two(a, b);
-    System.out.printf("The GCD and LCM of the two numbers %d and %d is : %d and %d respectively.\n", a, b, gcd, (a * b)/gcd);
+    int lcm = (a * b) / gcd;
+    System.out.printf("The GCD and LCM of the two numbers %d and %d is : %d and %d respectively.\n", a, b, gcd, lcm);
   }
 }
