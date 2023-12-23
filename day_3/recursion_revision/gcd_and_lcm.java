@@ -1,5 +1,5 @@
 public class gcd_and_lcm {
-  static int gcd_of_two(int dividend, int divisor) {
+  static int gcd_of_two(int dividend, int divisor) { // this method return the GCD of two numbers using recursion
     if(divisor == 0) {
       return dividend;
     }
